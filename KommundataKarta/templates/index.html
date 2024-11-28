@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sweden Municipalities KPI Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <h1>Sweden Kommuner Kolada Nyckeltal</h1>
+        <p>Utforska och visualisera nyckeltal över svenska kommuner</p>
+    </div>
+    <div class="search-container">
+        <div class="search-wrapper">
+            <input type="text" 
+                   class="search-box" 
+                   placeholder="Search KPIs or leave empty to see all..." 
+                   id="searchInput">
+            <div class="search-results" id="searchResults"></div>
+        </div>
+        <select class="year-select" id="yearSelect">
+            <option value="">Select Year</option>
+        </select>
+        <button id="sortDirection" class="sort-btn">
+            🔄 High is Good
+        </button>
+    </div>
+    <div id="map"></div>
+    <div class="loading" id="loadingIndicator"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="/static/js/main.js" defer></script>
+</body>
+</html>
